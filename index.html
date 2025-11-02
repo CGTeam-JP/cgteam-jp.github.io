@@ -1,4 +1,149 @@
-T h i s 
-I s
-A
-P l a c e h o l d e r
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGTeam - Simple Website Template</title>
+
+  <!-- Favicon Light -->
+  <link rel="icon" type="image/png" href="assets/black.png" media="(prefers-color-scheme: light)">
+  <!-- Favicon Dark -->
+  <link rel="icon" type="image/png" href="assets/white.png" media="(prefers-color-scheme: dark)">
+  <!-- Fallback -->
+  <link rel="icon" type="image/png" href="assets/black.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="header">
+    <img id="logo" src="assets/black.png" alt="CGTeam Logo">
+    <nav>
+      <a class="navbutton" href="#home">Home</a>
+      <a class="navbutton" href="#works">Works</a>
+      <a class="joinButton" href="#joinus">Join Us</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home">
+      <div id="slider">
+        <h1>CGTeamへようこそ！</h1>
+        <p>Nyanyame nyanyajyuunyanya do no nyarabi de nyaku nyaku </p>
+        <p>Inyanyaku nyanyahan nyanyadai nyan nyaku nyarabete nyaganyagame</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Jugemu Jugemu Gokō-no surikire Kaijarisuigyo-no Suigyōmatsu Unraimatsu Fūraimatsu</p>
+      <p>Kūnerutokoro-ni Sumutokoro Yaburakōji-no Burakōji Paipopaipo Paipo-no Shūringan Shūringan-no Gūrindai</p>
+      <p>Gūrindai-no Ponpokopī-no Ponpokonā-no Chōkyūmei-no Chōsuke</p>
+    </section>
+
+    <section id="roles">
+      <h2>Roles</h2>
+      <p>In game development, there are many aspect that you have to pay attention to. A team usually divide the work accross the team with roles. Here are some example. Try to pick your own, or randomize it if you're not sure!</p>
+      <div class="role-grid" id="role-grid">
+        <div class="role" data-name="Game Programmer" style="background-color:#007bff;">
+          <img src="assets/roles/game_programmer.svg" class="role-icon">
+          <div class="role-name">Game Programmer</div>
+        </div>
+        <div class="role" data-name="Game Director" style="background-color:#28a745;">
+          <img src="assets/roles/game_director.svg" class="role-icon">
+          <div class="role-name">Game Director</div>
+        </div>
+        <div class="role" data-name="Level Designer" style="background-color:#ff8c00;">
+          <img src="assets/roles/level_designer.svg" class="role-icon">
+          <div class="role-name">Level Designer</div>
+        </div>
+        <div class="role" data-name="Game Planner" style="background-color:#8a2be2;">
+          <img src="assets/roles/game_planner.svg" class="role-icon">
+          <div class="role-name">Game Planner</div>
+        </div>
+        <div class="role" data-name="Story Writer" style="background-color:#e91e63;">
+          <img src="assets/roles/story_writer.svg" class="role-icon">
+          <div class="role-name">Story Writer</div>
+        </div>
+        <div class="role" data-name="UI Designer" style="background-color:#20c997;">
+          <img src="assets/roles/ui_designer.svg" class="role-icon">
+          <div class="role-name">UI Designer</div>
+        </div>
+        <div class="role" data-name="Art Designer" style="background-color:#ffc107;">
+          <img src="assets/roles/art_designer.svg" class="role-icon">
+          <div class="role-name">Art Designer</div>
+        </div>
+        <div class="role" data-name="VFX Artist" style="background-color:#6f42c1;">
+          <img src="assets/roles/vfx_artist.svg" class="role-icon">
+          <div class="role-name">VFX Artist</div>
+        </div>
+        <div class="role" data-name="3D Animator" style="background-color:#fd7e14;">
+          <img src="assets/roles/3d_artist.svg" class="role-icon">
+          <div class="role-name">3D Animator</div>
+        </div>
+        <div class="role" data-name="2D Animator" style="background-color:#dc3545;">
+          <img src="assets/roles/2d_artist.svg" class="role-icon">
+          <div class="role-name">2D Animator</div>
+        </div>
+        <div class="role" data-name="SE Artist" style="background-color:#17a2b8;">
+          <img src="assets/roles/se_artist.svg" class="role-icon">
+          <div class="role-name">SE Artist</div>
+        </div>
+        <div class="role" data-name="Music Composer" style="background-color:#6610f2;">
+          <img src="assets/roles/music_composer.svg" class="role-icon">
+          <div class="role-name">Music Composer</div>
+        </div>
+        <div class="role" data-name="Sound Director" style="background-color:#198754;">
+          <img src="assets/roles/sound_director.svg" class="role-icon">
+          <div class="role-name">Sound Director</div>
+        </div>
+        <div class="role" data-name="Other" style="background-color:#6c757d;">
+          <img src="assets/roles/other.svg" class="role-icon">
+          <div class="role-name">Other</div>
+        </div>
+      </div>
+      <button id="randomize-btn">Randomize Role</button>
+      <div id="selected-role">Selected Role: None</div>
+    </section>
+
+
+    <section id="works">
+      <h2>Our Works</h2>
+      <div class="scroll-container">
+        <div class="scroll-wrapper">
+          <div class="infinite-scroll">
+            <div class="scroll-item bg1"></div>
+            <div class="scroll-item bg2"></div>
+            <div class="scroll-item bg3"></div>
+            <div class="scroll-item bg4"></div>
+            <div class="scroll-item bg5"></div>
+            <div class="scroll-item bg6"></div>
+
+            <div class="scroll-item bg1"></div>
+            <div class="scroll-item bg2"></div>
+            <div class="scroll-item bg3"></div>
+            <div class="scroll-item bg4"></div>
+            <div class="scroll-item bg5"></div>
+            <div class="scroll-item bg6"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="joinus">
+      <h2>Join Us</h2>
+      <p>If you are interested in joining CGTeam, please click this form below!</p>
+      <div class="form-button">
+        <a href="https://forms.gle/example" target="_blank" rel="noopener noreferrer">Join CGTeam</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2069 CGTeam. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
