@@ -5,10 +5,7 @@ function updateLogo(e) {
   logo.src = e.matches ? "assets/white.png" : "assets/black.png";
 }
 
-// Set initial logo
 updateLogo(darkMode);
-
-// Update if user changes theme in real-time
 darkMode.addEventListener("change", updateLogo);
 
 
@@ -35,7 +32,6 @@ const randomizeRoleBtn = document.getElementById('randomize-btn');
 let selectedRole = null;
 let isRandomizing = false;
 
-// Klik role: pindahkan highlight ke role yang diklik
 roles.forEach(role => {
     role.addEventListener('click', () => {
         if (isRandomizing) return;
@@ -52,46 +48,81 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Randomizer
 randomizeRoleBtn.addEventListener('click', () => {
     if (isRandomizing) return;
     isRandomizing = true;
 
-    // Hapus semua highlight dulu
     clearHighlight();
 
     randomizeRoleBtn.disabled = true;
-    randomizeRoleBtn.textContent = 'Randomizing...';
+    randomizeRoleBtn.textContent = '。。。';
 
     let index = 0;
     const cycleSpeed = 50;
     const totalCycles = Math.floor(Math.random() * 30) + 30;
     let cycleCount = 0;
-
     const interval = setInterval(() => {
         clearHighlight();
         roles[index].classList.add('highlight');
         index = (index + 1) % roles.length;
         cycleCount++;
+        
         drumroll.currentTime = 0;
         drumroll.play();
 
+        const remaining = totalCycles - cycleCount;
+        const randomSlowDownPoint = 7 + Math.floor(Math.random() * 6);
+
+        if (remaining <= randomSlowDownPoint && cycleCount < totalCycles) {
+            clearInterval(interval);
+            slowDownCycle(index, cycleCount, randomSlowDownPoint);
+        }
         if (cycleCount >= totalCycles) {
             clearInterval(interval);
-
-            const finalIndex = (index - 1 + roles.length) % roles.length;
-
-            clearHighlight();
-            roles[finalIndex].classList.add('highlight');
-            setSelected(roles[finalIndex]);
-
-            isRandomizing = false;
-            randomizeRoleBtn.disabled = false;
-            randomizeRoleBtn.textContent = 'Randomize Role';
-            pingsound.currentTime = 0;
-            pingsound.play();
+            finish(index);
         }
+
     }, cycleSpeed);
+
+    function slowDownCycle(index, count, remaining) {
+        let delay = 60;
+
+        function slowStep() {
+            clearHighlight();
+            roles[index].classList.add('highlight');
+            index = (index + 1) % roles.length;
+            count++;
+
+            drumroll.currentTime = 0;
+            drumroll.play();
+
+            remaining--;
+            delay += 50;
+            if (remaining > 0) {
+                setTimeout(slowStep, delay);
+            } else {
+                finish(index);
+            }
+        }
+
+        setTimeout(slowStep, delay);
+    }
+
+    function finish(index) {
+        const finalIndex = (index - 1 + roles.length) % roles.length;
+
+        clearHighlight();
+        roles[finalIndex].classList.add('highlight');
+        setSelected(roles[finalIndex]);
+
+        isRandomizing = false;
+        randomizeRoleBtn.disabled = false;
+        randomizeRoleBtn.textContent = 'ランダム';
+
+        pingsound.currentTime = 0;
+        pingsound.play();
+    }
+
 });
 
 function clearHighlight() {
@@ -111,5 +142,20 @@ function setSelected(role) {
     selectedRole.classList.add('selected');
     selectedRoleDisplay.textContent = `Selected Role: ${role.dataset.name}`;
 }
+
+
+const items = document.querySelectorAll('.fade-on-scroll');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio >= 0.9) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+}, { threshold: 0.9 });
+
+items.forEach(el => observer.observe(el));
 
 
