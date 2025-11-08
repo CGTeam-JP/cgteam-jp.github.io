@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGTeam</title>
+
+  <link rel="icon" type="image/png" href="assets/black.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="assets/white.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="assets/black.png">
+
+  <link rel="stylesheet" href="style_join.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <img id="logo" src="assets/white.png" alt="CGTeam Logo">
+    <div class="spacer">
+      <a class="navbutton" href="./index.html">Home</a>
+      <a class="navbutton" href="#periods">Periods</a>
+      <a class="navbutton" href="#roles">Roles</a>
+
+  </div>
+  </header>
+
+  <main>
+    <section id="periods">
+      <h2 class="fade-on-scroll">【研修期間】</h2>
+      <p class="fade-on-scroll">
+        参加してからの一ヶ月間はまず基礎を教え、開発環境に慣れていただきます。その際、ご自身が好んで選んだ分野で小さな作品を制作していただきます。
+        これは展示目的ではなく、自らの成長に役立てていただけたらと思っております。
+      </p>
+      <br>
+      <h2 class="fade-on-scroll">【開発期間】</h2>
+      <p class="fade-on-scroll">
+        研修後、早速ですがゲームを開発していきます。お遊びではなく、ゲーム会社さながら、企画書を書くところから始め、ゲームを公開するところまでやっていきます。
+        全員が初心者であることを想定しているので、ゲームのクオリティは追及しません。その代わり、やると決めたからにはきちんと最後まで挑んでいただきます。
+      </p>
+
+      <div class="qna">
+        <p class="question">
+          Q: Is it really okay to join if i have no basic whatsoever?
+        </p>
+        <p class="answer">
+          A: Yes.
+        </p>
+        <p class="question">
+          Q: If I'm confident with my skill, can i skip the training period?
+        </p>
+        <p class="answer">
+          A: Yes.
+        </p>
+      </div>
+    </section>
+
+
+    <section id="roles">
+      <h2 class="fade-on-scroll">Roles</h2>
+      <p class="fade-on-scroll">
+        In game development, there are many aspect that you have to pay attention to. A team usually divide the work accross the team with roles. 
+        Here are some example. Try to pick your own, or randomize it if you're not sure!
+      </p>
+      <div class="role-grid fade-on-scroll" id="role-grid">
+        <div class="role" data-name="ゲームプログラマー" style="background-color:#007bff;">
+          <img src="assets/roles/game_programmer.svg" class="role-icon">
+          <div class="role-name">ゲームプログラマー</div>
+        </div>
+        <div class="role" data-name="ゲームディレクター" style="background-color:#28a745;">
+          <img src="assets/roles/game_director.svg" class="role-icon">
+          <div class="role-name">ゲームディレクター</div>
+        </div>
+        <div class="role" data-name="レベルデザイナー" style="background-color:#ff8c00;">
+          <img src="assets/roles/level_designer.svg" class="role-icon">
+          <div class="role-name">レベルデザイナー</div>
+        </div>
+        <div class="role" data-name="ゲームプランナー" style="background-color:#8a2be2;">
+          <img src="assets/roles/game_planner.svg" class="role-icon">
+          <div class="role-name">ゲームプランナー</div>
+        </div>
+        <div class="role" data-name="ストーリーライター" style="background-color:#e91e63;">
+          <img src="assets/roles/story_writer.svg" class="role-icon">
+          <div class="role-name">ストーリーライター</div>
+        </div>
+        <div class="role" data-name="UIデザイナー" style="background-color:#20c997;">
+          <img src="assets/roles/ui_designer.svg" class="role-icon">
+          <div class="role-name">UIデザイナー</div>
+        </div>
+        <div class="role" data-name="アートデザイナー" style="background-color:#ffc107;">
+          <img src="assets/roles/art_designer.svg" class="role-icon">
+          <div class="role-name">アートデザイナー</div>
+        </div>
+        <div class="role" data-name="VFXアーティスト" style="background-color:#6f42c1;">
+          <img src="assets/roles/vfx_artist.svg" class="role-icon">
+          <div class="role-name">VFXアーティスト</div>
+        </div>
+        <div class="role" data-name="3Dアニメーター" style="background-color:#fd7e14;">
+          <img src="assets/roles/3d_artist.svg" class="role-icon">
+          <div class="role-name">3Dアニメーター</div>
+        </div>
+        <div class="role" data-name="2Dアニメーター" style="background-color:#dc3545;">
+          <img src="assets/roles/2d_artist.svg" class="role-icon">
+          <div class="role-name">2Dアニメーター</div>
+        </div>
+        <div class="role" data-name="SEアーティスト" style="background-color:#17a2b8;">
+          <img src="assets/roles/se_artist.svg" class="role-icon">
+          <div class="role-name">SEアーティスト</div>
+        </div>
+        <div class="role" data-name="音楽コンポーザー" style="background-color:#6610f2;">
+          <img src="assets/roles/music_composer.svg" class="role-icon">
+          <div class="role-name">音楽コンポーザー</div>
+        </div>
+        <div class="role" data-name="サウンドディレクター" style="background-color:#198754;">
+          <img src="assets/roles/sound_director.svg" class="role-icon">
+          <div class="role-name">サウンドディレクター</div>
+        </div>
+        <div class="role" data-name="その他" style="background-color:#6c757d;">
+          <img src="assets/roles/other.svg" class="role-icon">
+          <div class="role-name">その他</div>
+        </div>
+      </div>
+      <button id="randomize-btn">ランダム</button>
+      <div id="selected-role">Selected Role: None</div>
+      <div class="role-description"></div>
+    </section>
+  </main>
+   <script src="script_join.js"></script>
+</body>

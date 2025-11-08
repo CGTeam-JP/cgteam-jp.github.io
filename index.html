@@ -1,116 +1,60 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="jp">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CGTeam</title>
 
-  <!-- Favicon Light -->
   <link rel="icon" type="image/png" href="assets/black.png" media="(prefers-color-scheme: light)">
-  <!-- Favicon Dark -->
   <link rel="icon" type="image/png" href="assets/white.png" media="(prefers-color-scheme: dark)">
-  <!-- Fallback -->
   <link rel="icon" type="image/png" href="assets/black.png">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header id="header">
-    <img id="logo" src="assets/black.png" alt="CGTeam Logo">
-    <nav>
-      <a class="navbutton" href="#home">Home</a>
+    <img id="logo" src="assets/white.png" alt="CGTeam Logo">
+    <div class="spacer">
+      <a class="navbutton" href="#about">About</a>
       <a class="navbutton" href="#works">Works</a>
-      <a class="joinButton" href="#joinus">Join Us</a>
-    </nav>
+      <a class="navbutton" href="https://www.instagram.com/creativegamedev.team">Contact</a>
+      <a class="navJoin" href="./join.html">Join Us</a>
+    </div>
   </header>
 
   <main>
-
     <section id="home">
-      <div id="slider">
-        <h1>CGTeamへようこそ！</h1>
-        <p>Nyanyame nyanyajyuunyanya do no nyarabi de nyaku nyaku </p>
-        <p>Inyanyaku nyanyahan nyanyadai nyan nyaku nyarabete nyaganyagame</p>
-      </div>
-    </section>
+      <div id="slider"></div>
+      <div class="hero-div">
+        <h1>Dream it. Will it. Build it.</h1>
 
-    <section id="about" class="fade-on-scroll">
-      <h2>About Us</h2>
-      <p>Jugemu Jugemu Gokō-no surikire Kaijarisuigyo-no Suigyōmatsu Unraimatsu Fūraimatsu</p>
-      <p>Kūnerutokoro-ni Sumutokoro Yaburakōji-no Burakōji Paipopaipo Paipo-no Shūringan Shūringan-no Gūrindai</p>
-      <p>Gūrindai-no Ponpokopī-no Ponpokonā-no Chōkyūmei-no Chōsuke</p>
-    </section>
-
-    <section id="roles" class="fade-on-scroll">
-      <h2>Roles</h2>
-      <p>In game development, there are many aspect that you have to pay attention to. A team usually divide the work accross the team with roles. Here are some example. Try to pick your own, or randomize it if you're not sure!</p>
-      <div class="role-grid" id="role-grid">
-        <div class="role" data-name="ゲームプログラマー" style="background-color:#007bff;">
-          <img src="assets/roles/game_programmer.svg" class="role-icon">
-          <div class="role-name">ゲームプログラマー</div>
-        </div>
-        <div class="role" data-name="ゲームディレクター" style="background-color:#28a745;">
-          <img src="assets/roles/game_director.svg" class="role-icon">
-          <div class="role-name">ゲームディレクター</div>
-        </div>
-        <div class="role" data-name="レベルデザイナー" style="background-color:#ff8c00;">
-          <img src="assets/roles/level_designer.svg" class="role-icon">
-          <div class="role-name">レベルデザイナー</div>
-        </div>
-        <div class="role" data-name="ゲームプランナー" style="background-color:#8a2be2;">
-          <img src="assets/roles/game_planner.svg" class="role-icon">
-          <div class="role-name">ゲームプランナー</div>
-        </div>
-        <div class="role" data-name="ストーリーライター" style="background-color:#e91e63;">
-          <img src="assets/roles/story_writer.svg" class="role-icon">
-          <div class="role-name">ストーリーライター</div>
-        </div>
-        <div class="role" data-name="UIデザイナー" style="background-color:#20c997;">
-          <img src="assets/roles/ui_designer.svg" class="role-icon">
-          <div class="role-name">UIデザイナー</div>
-        </div>
-        <div class="role" data-name="アートデザイナー" style="background-color:#ffc107;">
-          <img src="assets/roles/art_designer.svg" class="role-icon">
-          <div class="role-name">アートデザイナー</div>
-        </div>
-        <div class="role" data-name="VFXアーティスト" style="background-color:#6f42c1;">
-          <img src="assets/roles/vfx_artist.svg" class="role-icon">
-          <div class="role-name">VFXアーティスト</div>
-        </div>
-        <div class="role" data-name="3Dアニメーター" style="background-color:#fd7e14;">
-          <img src="assets/roles/3d_artist.svg" class="role-icon">
-          <div class="role-name">3Dアニメーター</div>
-        </div>
-        <div class="role" data-name="2Dアニメーター" style="background-color:#dc3545;">
-          <img src="assets/roles/2d_artist.svg" class="role-icon">
-          <div class="role-name">2Dアニメーター</div>
-        </div>
-        <div class="role" data-name="SEアーティスト" style="background-color:#17a2b8;">
-          <img src="assets/roles/se_artist.svg" class="role-icon">
-          <div class="role-name">SEアーティスト</div>
-        </div>
-        <div class="role" data-name="音楽コンポーザー" style="background-color:#6610f2;">
-          <img src="assets/roles/music_composer.svg" class="role-icon">
-          <div class="role-name">音楽コンポーザー</div>
-        </div>
-        <div class="role" data-name="サウンドディレクター" style="background-color:#198754;">
-          <img src="assets/roles/sound_director.svg" class="role-icon">
-          <div class="role-name">サウンドディレクター</div>
-        </div>
-        <div class="role" data-name="その他" style="background-color:#6c757d;">
-          <img src="assets/roles/other.svg" class="role-icon">
-          <div class="role-name">その他</div>
+        <div class ="hero-buttons">
+          <div class="join-button">
+            <a href="https://forms.gle/example" target="_blank" rel="noopener noreferrer">Join CGTeam</a>
+          </div>
+          <div class="explore-button">
+            <a href="#about">Explore about us↗</a>
+          </div>
         </div>
       </div>
-      <button id="randomize-btn">ランダム</button>
-      <div id="selected-role">Selected Role: None</div>
+
     </section>
-
-
-    <section id="works" class="fade-on-scroll">
-      <h2>Our Works</h2>
-      <div class="scroll-container">
+    <section id="about">
+      <h2 class="fade-on-scroll">このサークルについて</h2>
+      <p class="fade-on-scroll">
+        サークル全体が一団となってゲーム開発を行うサークルです。何も知らない方からバリバリ開発している方まで大歓迎です。
+        基本的に興味とやる気、そしてパソコン一台あれば誰でも参加していただけます。学部学科、性別、学年、知識経験問わず参加いただけますので、興味のある方はご連絡ください。
+        東京理科大学野田キャンパスで活動を行っていますので、本大学以外の方の参加はご遠慮ください。他キャンパスでも頻繁にコミュニケーションをとれる方であれば歓迎です。<br><br>
+      </p>
+      <p class="fade-on-scroll">
+        活動頻度についてですが、週１～２回（対面）で進捗報告や軌道修正を行い、それ以外の空いている時間で開発を進めてもらう感じになります。
+        したがって、アルバイト等で時間があまりとれない方は「格段と」忙しくなることをあらかじめご了承ください。
+        とはいえ、多くの方にゲーム開発に興味を持ってスキルを磨いてもらいたいので、強制もしませんし、いつでもご相談受け付けます。
+      </p>
+    </section>
+    
+    <section id="works">
+      <h2 class="fade-on-scroll">Our Works</h2>
+      <div class="scroll-container fade-on-scroll">
         <div class="scroll-wrapper">
           <div class="infinite-scroll">
             <div class="scroll-item bg1"></div>
@@ -132,18 +76,9 @@
     </section>
 
     <section id="joinus">
-      <h2>Join Us</h2>
-      <p>If you are interested in joining CGTeam, please click this form below!</p>
-      <div class="form-button">
-        <a href="https://forms.gle/example" target="_blank" rel="noopener noreferrer">Join CGTeam</a>
-      </div>
+      <a class="form-button" href="./join.html">Join CGTeam</a>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2069 CGTeam. All rights reserved.</p>
-  </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
